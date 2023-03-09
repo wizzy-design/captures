@@ -3,6 +3,7 @@ import clock from "../img/clock.svg";
 import diaphragm from "../img/diaphragm.svg";
 import money from "../img/money.svg";
 import teamwork from "../img/teamwork.svg";
+import home2 from "../img/home2.png";
 
 const ServiceSection = () => {
   return (
@@ -41,6 +42,9 @@ const ServiceSection = () => {
             <p>Lorem ipsum dolor sit amet.</p>
           </div>
         </div>
+      </div>
+      <div className="image">
+        <img src={home2} alt="Home picture" />
       </div>
     </div>
   );
