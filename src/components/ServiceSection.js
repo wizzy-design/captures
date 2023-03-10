@@ -44,7 +44,7 @@ const ServiceSection = () => {
         </div>
       </div>
       <div className="image">
-        <img src={home2} alt="Home picture" />
+        <img src={home2} alt="Home" />
       </div>
     </div>
   );
