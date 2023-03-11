@@ -2,10 +2,11 @@ import React from "react";
 import home1 from "../img/home1.png";
 //Styled
 import styled from "styled-components";
+import { Layout, Description, Image, Hide } from "../styles";
 
 const AboutSection = () => {
   return (
-    <About>
+    <Layout>
       <Description>
         <div className="title">
           <Hide>
@@ -29,39 +30,8 @@ const AboutSection = () => {
       <Image>
         <img src={home1} alt="Guy with a camera" />
       </Image>
-    </About>
+    </Layout>
   );
 };
 
-// Styled Components
-const About = styled.div`
-  min-height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5rem 3.5rem; 
-  color: white;
-`;
-
-const Description = styled.div`
-  flex: 1;
-  padding-right: 5rem;
-  h2 {
-    font-weight: lighter;
-  }
-`;
-
-const Image = styled.div`
-  flex: 1;
-  overflow: hidden;
-  img {
-    width: 100%;
-    height: 80vh;
-    object-fit: contain;
-  }
-`;
-
-const Hide = styled.div`
-  overflow: hidden;
-`;
 export default AboutSection;
