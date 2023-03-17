@@ -74,15 +74,19 @@ const Card = styled.div`
   .icon {
     display: flex;
     align-items: center;
-    img{
+    img {
       max-width: 40px;
     }
-    h3{
+    h3 {
       margin-left: 1rem;
       background: white;
+      border-radius: 5px;
       color: black;
-      padding: .5rem 1rem;
+      padding: 0.5rem 1rem;
     }
+  }
+  p {
+    font-size: 1.25rem;
   }
 `;
 
