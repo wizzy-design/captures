@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useLocation } from "react-router-dom";
 import { MovieState } from "../movieState";
+// Import Framer Motion
+import { motion } from "framer-motion";
+import { pageAnimation } from "../animation";
 
 const MovieDetail = () => {
   const url = useLocation();
@@ -23,7 +26,12 @@ const MovieDetail = () => {
   return (
     <>
       {movie && ( //means render out content of <Details> only when movie is available
-        <Details>
+        <Details
+          variants={pageAnimation}
+          exit="exit"
+          initial="hidden"
+          animate="show"
+        >
           <HeadLine>
             <h2>{movie.title}</h2>
             <img src={movie.mainImg} alt="movie" />
@@ -46,7 +54,7 @@ const MovieDetail = () => {
   );
 };
 
-const Details = styled.div`
+const Details = styled(motion.div)`
   color: white;
 `;
 
@@ -80,7 +88,7 @@ const AwardStyle = styled.div`
   h3 {
     font-size: 1.3rem;
   }
-  p{
+  p {
     font-size: 1.05rem;
     padding: 2rem 0rem;
   }
@@ -94,7 +102,7 @@ const AwardStyle = styled.div`
 
 const ImageDisplay = styled.div`
   min-height: 50vh;
-  img{
+  img {
     width: 100%;
     height: 100vh;
     object-fit: cover;
