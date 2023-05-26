@@ -5,12 +5,20 @@ import money from "../img/money.svg";
 import teamwork from "../img/teamwork.svg";
 import home2 from "../img/home2.png";
 //Styles
-import { Layout, Description, Image, Hide } from "../styles";
+import { Layout, Description, Image } from "../styles";
 import styled from "styled-components";
+import { useScroll } from "../components/useScroll";
+import { scrollReveal } from "../animation";
 
 const ServiceSection = () => {
+  const [element, controls] = useScroll(); // Elements and Controls are the 2 things we returned from our created useScroll hook
   return (
-    <Services>
+    <Services
+      ref={element}
+      variants={scrollReveal}
+      animate={controls}
+      initial="hidden"
+    >
       <Description>
         <h2>
           High <span>quality</span> services
