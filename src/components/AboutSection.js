@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Layout, Description, Image, Hide } from "../styles";
 import { titleAnim, fade, photoAnim } from "../animation";
 import Wave from "./Wave";
+import styled from "styled-components";
 
 const AboutSection = () => {
   //Variants
@@ -12,17 +13,17 @@ const AboutSection = () => {
   return (
     <Layout>
       <Description>
-        <motion.div>
+        <motion.div className="titleDiv">
           <Hide>
-            <motion.h2 variants={titleAnim}>We work to make</motion.h2>
+            <Title variants={titleAnim}>We work to make</Title>
           </Hide>
           <Hide>
-            <motion.h2 variants={titleAnim}>
+            <Title variants={titleAnim}>
               your <span>dreams</span> come
-            </motion.h2>
+            </Title>
           </Hide>
           <Hide>
-            <motion.h2 variants={titleAnim}>true.</motion.h2>
+            <Title variants={titleAnim}>true.</Title>
           </Hide>
         </motion.div>
         <motion.p variants={fade}>
@@ -38,5 +39,9 @@ const AboutSection = () => {
     </Layout>
   );
 };
+
+const Title = styled(motion.h2)`
+  font-size: 3rem;
+`
 
 export default AboutSection;

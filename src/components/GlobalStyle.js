@@ -9,9 +9,16 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
 }
 
+html{
+    @media (max-width: 1023px){
+        font-size: 80%;
+    }
+}
+
 body{
     background: #1b1b1b;
     font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
 }
 
 button{
@@ -32,7 +39,7 @@ button{
 
 h2{
     font-weight: lighter;
-    font-size: 3rem; /* 4rem */
+    font-size: 2rem; /* 4rem */
 }
 
 h3{

@@ -8,7 +8,7 @@ import { pageAnimation } from "../animation";
 
 const MovieDetail = () => {
   const url = useLocation();
-  const [movies, setMovies] = useState(MovieState);
+  const [movies] = useState(MovieState);
   const [movie, setMovie] = useState(null);
 
   // UseEffect
@@ -81,6 +81,11 @@ const Awards = styled.div`
   margin: 5rem 3rem;
   align-items: center;
   justify-content: space-around;
+
+  @media (max-width: 795px) {
+    display: block;
+    margin: 2rem 2rem;
+  }
 `;
 
 const AwardStyle = styled.div`

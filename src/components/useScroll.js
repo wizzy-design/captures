@@ -4,7 +4,7 @@ import { useAnimationControls } from "framer-motion"; // To be able to tell reac
 
 export const useScroll = () => {
   const controls = useAnimationControls();
-  const [element, inView] = useInView({ threshold: 0.5 }); // Threshold: 0.5 means that when the element is halfway in the frame, the event is activitated.
+  const [element, inView] = useInView({ threshold: 0.4 }); // Threshold: 0.5 means that when the element is halfway in the frame, the event is activitated.
 
   useEffect(() => {
     if (inView) {

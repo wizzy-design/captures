@@ -5,6 +5,7 @@ import FaqSection from "../components/FaqSection";
 // Import Framer Motion
 import { motion } from "framer-motion";
 import { pageAnimation } from "../animation";
+import ScrollTop from "../components/ScrollTop";
 
 const AboutUs = () => {
   return (
@@ -19,6 +20,8 @@ const AboutUs = () => {
       // Propagation
       // If a motion component has children, changes in variant will flow down through the component hierarchy. These changes in variant will flow down until a child component defines its own animate property.
     >
+      <ScrollTop />{" "}
+      {/* ScrollTop: To make the page scroll to the top automatically whenever the pathname changes */}
       <AboutSection />
       <ServiceSection />
       <FaqSection />
