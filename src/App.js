@@ -20,8 +20,8 @@ function App() {
         <GlobalStyle />
         <Nav />
         <Routes location={location} key={location.pathname}>
-          <Route path="/captures" exact element={<AboutUs />} />
-          <Route path="/aboutus" exact element={<AboutUs />} />
+          <Route path="/captures" element={<AboutUs />} />
+          <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/work" exact element={<OurWork />} />
           <Route path="/work/:id" exact element={<MovieDetail />} />
           <Route path="/contact" exact element={<ContactUs />} />
